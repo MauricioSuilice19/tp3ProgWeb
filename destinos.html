@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/destinos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-airplane"></i> Turismo
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="destinos.html">Destinos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Paquetes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="contenedor5">
+        <h2 class="text-center">Destinos</h2>
+        <div class="text-center mb-4">
+            <button class="boton-filtro btn btn-outline-primary active" data-filter="todos">
+                <i class="bi bi-grid"></i> Todos</button>
+            <button class="boton-filtro btn btn-outline-primary" data-filter="naturaleza">
+                <i class="bi bi-tree"></i> Naturaleza</button>
+            <button class="boton-filtro btn btn-outline-primary" data-filter="montaña">
+                <i class="bi bi-triangle"></i> Montaña</button>
+            <button class="boton-filtro btn btn-outline-primary" data-filter="ciudad">
+                <i class="bi bi-buildings"></i> Ciudad</button>
+            <button class="boton-filtro btn btn-outline-primary" data-filter="nieve">
+                <i class="bi bi-snow"></i> Nieve</button>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+                <div class="card destino-card">
+                    <div class="img-container">
+                        <img src="img/destinos/Yala.jpg" class="card-img-top" alt="Yala">
+                        <div class="overlay">
+                            <p>Lagunas y senderismo</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5><i class="bi bi-geo-alt"></i> Lagunas de Yala</h5>
+                        <p><i class="bi bi-cash"></i> $15.000 </p>
+                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Lagunas de Yala"
+                            data-precio="$15.000" data-duracion="Dia Completo"
+                            data-descripcion="Lagunas y senderismo en Yala">
+                            <i class="bi bi-eye"></i> Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 destino ciudad">
+                <div class="card destino-card">
+                    <div class="img-container">
+                        <img src="img/destinos/jujuycapital.jpg" class="card-img-top" alt="Jujuycapital">
+                        <div class="overlay">
+                            <p>Tour por la Ciudad + Cultura</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5><i class="bi bi-geo-alt"></i> Salvador De Jujuy</h5>
+                        <p><i class="bi bi-cash"></i> $18.000 </p>
+                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Salvador De Jujuy"
+                            data-precio="$18.000" data-duracion="Dia Completo"
+                            data-descripcion="Tour por la Ciudad + Cultura">
+                            <i class="bi bi-eye"></i> Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 destino montaña">
+                <div class="card destino-card">
+                    <div class="img-container">
+                        <img src="img/destinos/purmamarca.jpg" class="card-img-top" alt="Purmamarca">
+                        <div class="overlay">
+                            <p>3 Días - Cultura y paisajes unicos</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5><i class="bi bi-geo-alt"></i> Purmamarca</h5>
+                        <p><i class="bi bi-cash"></i> $45.000 </p>
+                        <p><i class="bi bi-calendar-event"></i> 3 dias</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Purmamarca" data-precio="$45.000"
+                            data-duracion="3 dias" data-descripcion="3 Días - Cultura y paisajes unicos">
+                            <i class="bi bi-eye"></i> Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 destino montaña">
+                <div class="card destino-card">
+                    <div class="img-container">
+                        <img src="img/destinos/cerro7colores.jpg" class="card-img-top" alt="Cerro de los 7 Colores">
+                        <div class="overlay">
+                            <p>Excursion guiada</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5><i class="bi bi-geo-alt"></i> Cerro de los 7 Colores</h5>
+                        <p><i class="bi bi-cash"></i> $20.000 </p>
+                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Cerro de los 7 Colores"
+                            data-precio="$20.000" data-duracion="Dia Completo"
+                            data-descripcion="Excursion guiada al Cerro de los 7 Colores">
+                            <i class="bi bi-eye"></i> Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+                <div class="card destino-card">
+                    <div class="img-container">
+                        <img src="img/destinos/salinas.jpg" class="card-img-top" alt="Salinas">
+                        <div class="overlay">
+                            <p>Experiencia única</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5><i class="bi bi-geo-alt"></i> Salinas Grandes</h5>
+                        <p><i class="bi bi-cash"></i> $30.000 </p>
+                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Salinas Grandes"
+                            data-precio="$30.000" data-duracion="Dia Completo"
+                            data-descripcion="Experiencia única en las salinas">
+                            <i class="bi bi-eye"></i> Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 destino nieve">
+                <div class="card destino-card">
+                    <div class="img-container">
+                        <img src="img/destinos/bariloche.jpg" class="card-img-top" alt="Bariloche">
+                        <div class="overlay">
+                            <p>Experiencia única</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5><i class="bi bi-geo-alt"></i> Bariloche</h5>
+                        <p><i class="bi bi-cash"></i> $120.000 </p>
+                        <p><i class="bi bi-calendar-event"></i> 5 dias</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Bariloche" data-precio="$120.000"
+                            data-duracion="5 dias" data-descripcion="Experiencia única en la nieve">
+                            <i class="bi bi-eye"></i> Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive mt-5">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bariloche</td>
+                        <td>$120.000</td>
+                    </tr>
+                    <tr>
+                        <td>Purmamarca</td>
+                        <td>$45.000</td>
+                    </tr>
+                    <tr>
+                        <td>Salinas Grandes</td>
+                        <td>$30.000</td>
+                    </tr>
+                    <tr>
+                        <td>Cerro de los 7 Colores</td>
+                        <td>$20.000</td>
+                    </tr>
+                    <tr>
+                        <td>San Salvador De Jujuy</td>
+                        <td>$18.000</td>
+                    </tr>
+                    <tr>
+                        <td>Lagunas de Yala</td>
+                        <td>$15.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <script src="js/destinos.js"></script>
+    <div class="modal fade" id="destinoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-geo-alt"></i>
+                        <span id="modalTitulo"></span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImagen" class="img-fluid rounded mb-3" src="" alt="">
+                    <p id="modalDescripcion"></p>
+                    <p><strong>Precio:</strong> <span id="modalPrecio"></span></p>
+                    <p><strong>Duración:</strong> <span id="modalDuracion"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+
+        <p class="mb-1">© 2026 Turismo</p>
+        <p class="mb-1">Trabajo Práctico - Programación Web</p>
+
+        <div>
+            <i class="bi bi-instagram mx-2"></i>
+            <i class="bi bi-facebook mx-2"></i>
+            <i class="bi bi-whatsapp mx-2"></i>
+        </div>
+
+    </div>
+</footer>
+
+</html>
