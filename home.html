@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Font Awesome (librería de iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Estilos del home -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+  <!-- Menu superior -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Turismo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Dropdown / Mega menú -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Playa</a></li>
+              <li><a class="dropdown-item" href="#">Montaña</a></li>
+              <li><a class="dropdown-item" href="#">Ciudad</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Agencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero con imagen/video + texto animado -->
+  <header class="hero bg-dark text-white text-center p-5">
+    <h1 id="hero-text">Descubre el mundo con nosotros</h1>
+    <p>Viajes únicos, experiencias inolvidables</p>
+    <!-- Ejemplo con video -->
+    <video autoplay muted loop class="w-100">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </header>
+
+  <!-- Cards de destinos con hover -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card destino-card">
+          <img src="playa.jpg" class="card-img-top" alt="Playa">
+          <div class="card-body">
+            <h5 class="card-title">Playa</h5>
+            <p class="card-text">Relájate en arenas blancas.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Repite para otros destinos -->
+    </div>
+  </section>
+
+  <!-- Contador animado -->
+  <section class="bg-light text-center p-5">
+    <h2>Más de <span id="contador">0</span> viajeros felices</h2>
+  </section>
+
+  <!-- Carousel de testimonios -->
+  <section class="container my-5">
+    <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <blockquote class="blockquote text-center">
+            <p>"Un viaje espectacular, todo organizado."</p>
+            <footer class="blockquote-footer">Ana</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote text-center">
+            <p>"La mejor experiencia de mi vida."</p>
+            <footer class="blockquote-footer">Carlos</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer con formulario, redes sociales y mapa -->
+  <footer class="bg-primary text-white p-4">
+    <div class="container">
+      <div class="row">
+        <!-- Formulario -->
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <form>
+            <input type="email" class="form-control mb-2" placeholder="Tu correo" required>
+            <textarea class="form-control mb-2" placeholder="Mensaje"></textarea>
+            <button class="btn btn-light">Enviar</button>
+          </form>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-md-4 text-center">
+          <h5>Síguenos</h5>
+          <a href="#"><i class="fab fa-facebook fa-2x mx-2"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x mx-2"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x mx-2"></i></a>
+        </div>
+        <!-- Mapa embebido -->
+        <div class="col-md-4">
+          <h5>Ubicación</h5>
+          <iframe src="https://maps.google.com/maps?q=Jujuy&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="150" style="border:0;"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script jQuery para animaciones -->
+  <script>
+    // Texto animado en Hero
+    $("#hero-text").hide().fadeIn(2000);
+
+    // Contador animado
+    let count = 0;
+    let interval = setInterval(function() {
+      if(count < 500) {
+        count++;
+        $("#contador").text(count);
+      } else {
+        clearInterval(interval);
+      }
+    }, 10);
+  </script>
+</body>
+</html>

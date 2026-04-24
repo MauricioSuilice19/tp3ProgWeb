@@ -1,0 +1,94 @@
+/*Encabezado*/
+.navbar {
+  background: linear-gradient(135deg, #0d6efd, #87CEEB);
+}
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  filter: brightness(60%);
+}
+
+.hero .overlay {
+  position: relative;
+  height: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* ====== Cards de destinos ====== */
+.destino-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.destino-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.destino-card img {
+  transition: transform 0.5s ease;
+}
+
+.destino-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ====== Contador ====== */
+#contador {
+  font-weight: bold;
+  color: #0d6efd;
+  font-size: 2rem;
+}
+
+/* ====== Carousel testimonios ====== */
+.carousel .blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.carousel .blockquote-footer {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: linear-gradient(135deg, #0d6efd, #87CEEB);
+}
+
+footer h5 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffc107;
+}
+
+footer .btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer .btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
