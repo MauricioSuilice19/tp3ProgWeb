@@ -1,23 +1,19 @@
-/*Encabezado*/
-.navbar {
-  background: linear-gradient(135deg, #0d6efd, #87CEEB);
-}
 .hero {
   position: relative;
-  height: 70vh;
+  height: 70vh; /*altura del titulo*/
   overflow: hidden;
+  text-align: center;
 }
 
 .hero video {
-  object-fit: cover;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  filter: brightness(60%);
-}
-
-.hero .overlay {
-  position: relative;
   height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  z-index: -1;
 }
 
 .hero-text {
@@ -27,6 +23,12 @@
   transform: translate(-50%, -50%);
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
+.hero .overlay {
+  position: relative;
+  height: 100%;
+}
+
+
 
 /* ====== Cards de destinos ====== */
 .destino-card {
@@ -63,11 +65,6 @@
 .carousel .blockquote-footer {
   color: #0d6efd;
   font-weight: bold;
-}
-
-/* ====== Footer ====== */
-footer {
-  background: linear-gradient(135deg, #0d6efd, #87CEEB);
 }
 
 footer h5 {
