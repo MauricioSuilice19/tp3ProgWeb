@@ -1,43 +1,122 @@
 $(document).ready(function () {
-  // FILTROS DE DESTINOS
+  // rating aleatorio (entre 3 y 5)
+  $(".destino").each(function () {
+    let rating = Math.floor(Math.random() * 3) + 3;
+
+    // guardo el rating
+    $(this).attr("data-rating", rating);
+
+    // genero estrellas
+    let estrellas = "";
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        estrellas += '<i class="bi bi-star-fill"></i>';
+      } else {
+        estrellas += '<i class="bi bi-star"></i>';
+      }
+    }
+
+    // lo muestro en la card
+    $(this).find(".rating").html(estrellas);
+  });
+
+  // Filtro de destinos
   $(".boton-filtro").click(function () {
-    // Tomo el filtro del botón que se clickeó (ej: montaña, ciudad, etc.)
     let filtro = $(this).data("filter");
 
-    // Marco visualmente el botón activo
+    // boton activo
     $(".boton-filtro").removeClass("active");
     $(this).addClass("active");
 
-    // Si el usuario eligió "todos", muestro todo
     if (filtro === "todos") {
       $(".destino").fadeIn(300);
     } else {
-      // Si no, oculto todos y muestro solo los que coinciden
       $(".destino").hide();
       $("." + filtro).fadeIn(300);
     }
   });
 
-  ///BOTÓN "VER MÁS" (MODAL)
+  /// BOTON "VER MAS" (MODAL)
 
   $(".ver-mas-btn").click(function () {
-    // Obtengo la info del destino desde los data-*
+    // efecto click en card
+    let card = $(this).closest(".destino-card");
+    card.addClass("click-anim");
+
+    setTimeout(() => {
+      card.removeClass("click-anim");
+    }, 200);
+
+    // datos
     let destino = $(this).data("destino");
     let precio = $(this).data("precio");
     let duracion = $(this).data("duracion");
     let descripcion = $(this).data("descripcion");
 
-    // Aqui va la imagen
+    // imagen
     let imagen = $(this).closest(".card").find("img").attr("src");
 
-    // Cargo esa info dentro del modal
+    // rating
+    let rating = $(this).closest(".destino").data("rating");
+
+    // estrellas modal
+    let estrellas = "";
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        estrellas += '<i class="bi bi-star-fill"></i>';
+      } else {
+        estrellas += '<i class="bi bi-star"></i>';
+      }
+    }
+
+    // cargo datos en el modal
     $("#modalTitulo").text(destino);
     $("#modalPrecio").text(precio);
     $("#modalDuracion").text(duracion);
     $("#modalImagen").attr("src", imagen);
     $("#modalDescripcion").text(descripcion);
-    // Abro el modal usando Bootstrap
+    $("#modalRating").html(estrellas);
+
+    // abro modal
     let modal = new bootstrap.Modal(document.getElementById("destinoModal"));
     modal.show();
+  });
+
+  /// Animacion al hacer scroll
+
+  $(window).on("scroll", function () {
+    $(".destino").each(function () {
+      let posicion = $(this).offset().top;
+      let scroll = $(window).scrollTop();
+      let alturaPantalla = $(window).height();
+
+      if (scroll + alturaPantalla > posicion + 100) {
+        $(this).addClass("visible");
+      }
+    });
+  });
+
+  // ejecuta al cargar
+  $(window).trigger("scroll");
+
+  /// Scroll a seccion precios
+
+  $(".tabla-precios tbody tr").click(function () {
+    let destino = $(this).data("destino");
+
+    let posicion = $("#" + destino).offset().top;
+
+    $("html, body").animate(
+      {
+        scrollTop: posicion - 80,
+      },
+      600,
+    );
+  });
+
+  // Modo Oscuro
+
+  $("#modoOscuroBtn").click(function () {
+    $("body").toggleClass("dark-mode");
   });
 });

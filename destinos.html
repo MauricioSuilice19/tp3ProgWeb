@@ -37,12 +37,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
+                    <button id="modoOscuroBtn" class="btn btn-dark">
+                        <i class="bi bi-moon"></i>
+                    </button>
 
                 </ul>
             </div>
 
         </div>
     </nav>
+    <div class="hero">
+        <h1>Descubri lo nuevo</h1>
+    </div>
     <div class="contenedor5">
         <h2 class="text-center">Destinos</h2>
         <div class="text-center mb-4">
@@ -58,7 +64,7 @@
                 <i class="bi bi-snow"></i> Nieve</button>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+            <div class="col-12 col-md-6 col-lg-4 destino naturaleza" id="yala">
                 <div class="card destino-card">
                     <div class="img-container">
                         <img src="img/destinos/Yala.jpg" class="card-img-top" alt="Yala">
@@ -68,6 +74,7 @@
                     </div>
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Lagunas de Yala</h5>
+                        <div class="rating"></div>
                         <p><i class="bi bi-cash"></i> $15.000 </p>
                         <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Lagunas de Yala"
@@ -78,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 destino ciudad">
+            <div class="col-12 col-md-6 col-lg-4 destino ciudad" id="jujuy">
                 <div class="card destino-card">
                     <div class="img-container">
                         <img src="img/destinos/jujuycapital.jpg" class="card-img-top" alt="Jujuycapital">
@@ -88,6 +95,7 @@
                     </div>
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Salvador De Jujuy</h5>
+                        <div class="rating"></div>
                         <p><i class="bi bi-cash"></i> $18.000 </p>
                         <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Salvador De Jujuy"
@@ -98,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 destino montaña">
+            <div class="col-12 col-md-6 col-lg-4 destino montaña" id="purmamarca">
                 <div class="card destino-card">
                     <div class="img-container">
                         <img src="img/destinos/purmamarca.jpg" class="card-img-top" alt="Purmamarca">
@@ -108,6 +116,7 @@
                     </div>
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Purmamarca</h5>
+                        <div class="rating"></div>
                         <p><i class="bi bi-cash"></i> $45.000 </p>
                         <p><i class="bi bi-calendar-event"></i> 3 dias</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Purmamarca" data-precio="$45.000"
@@ -117,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 destino montaña">
+            <div class="col-12 col-md-6 col-lg-4 destino montaña" id="cerro7">
                 <div class="card destino-card">
                     <div class="img-container">
                         <img src="img/destinos/cerro7colores.jpg" class="card-img-top" alt="Cerro de los 7 Colores">
@@ -127,6 +136,7 @@
                     </div>
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Cerro de los 7 Colores</h5>
+                        <div class="rating"></div>
                         <p><i class="bi bi-cash"></i> $20.000 </p>
                         <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Cerro de los 7 Colores"
@@ -137,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 destino naturaleza">
+            <div class="col-12 col-md-6 col-lg-4 destino naturaleza" id="salinas">
                 <div class="card destino-card">
                     <div class="img-container">
                         <img src="img/destinos/salinas.jpg" class="card-img-top" alt="Salinas">
@@ -147,6 +157,7 @@
                     </div>
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Salinas Grandes</h5>
+                        <div class="rating"></div>
                         <p><i class="bi bi-cash"></i> $30.000 </p>
                         <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Salinas Grandes"
@@ -157,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 destino nieve">
+            <div class="col-12 col-md-6 col-lg-4 destino nieve" id="bariloche">
                 <div class="card destino-card">
                     <div class="img-container">
                         <img src="img/destinos/bariloche.jpg" class="card-img-top" alt="Bariloche">
@@ -167,6 +178,7 @@
                     </div>
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Bariloche</h5>
+                        <div class="rating"></div>
                         <p><i class="bi bi-cash"></i> $120.000 </p>
                         <p><i class="bi bi-calendar-event"></i> 5 dias</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Bariloche" data-precio="$120.000"
@@ -178,37 +190,51 @@
             </div>
         </div>
         <div class="table-responsive mt-5">
-            <table class="table table-bordered text-center">
+            <table class="table tabla-precios text-center align-middle">
                 <thead>
                     <tr>
                         <th>Destino</th>
+                        <th>Duracion</th>
                         <th>Precio</th>
+                        <th>Estado</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr data-destino="bariloche">
                         <td>Bariloche</td>
+                        <td>5 dias</td>
                         <td>$120.000</td>
+                        <td><span class="badge bg-primary">Disponible</span></td>
                     </tr>
-                    <tr>
+                    <tr data-destino="purmamarca">
                         <td>Purmamarca</td>
+                        <td>3 dias</td>
                         <td>$45.000</td>
+                        <td><span class="badge bg-success">Popular</span></td>
                     </tr>
-                    <tr>
+                    <tr data-destino="salinas">
                         <td>Salinas Grandes</td>
+                        <td>Dia Completo</td>
                         <td>$30.000</td>
+                        <td><span class="badge bg-info">Recomendado</span></td>
                     </tr>
-                    <tr>
+                    <tr data-destino="cerro7">
                         <td>Cerro de los 7 Colores</td>
+                        <td>Dia Completo</td>
                         <td>$20.000</td>
+                        <td><span class="badge bg-secondary">Nuevo</span></td>
                     </tr>
-                    <tr>
+                    <tr data-destino="jujuy">
                         <td>San Salvador De Jujuy</td>
+                        <td>Dia Completo</td>
                         <td>$18.000</td>
+                        <td><span class="badge bg-primary">Disponible</span></td>
                     </tr>
-                    <tr>
+                    <tr data-destino="yala">
                         <td>Lagunas de Yala</td>
+                        <td>Dia Completo</td>
                         <td>$15.000</td>
+                        <td><span class="badge bg-success">Economico</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -221,9 +247,13 @@
     <!-- JS -->
     <script src="js/main.js"></script>
     <script src="js/destinos.js"></script>
-    <div class="modal fade" id="destinoModal" tabindex="-1" aria-hidden="true">
+    <!-- Modal de destino -->
+    <div class="modal fade" id="destinoModal" tabindex="-1">
+        <!-- Modal centrado -->
         <div class="modal-dialog modal-dialog-centered">
+            <!-- Contenido del modal -->
             <div class="modal-content">
+                <!-- Encabezado del modal -->
                 <div class="modal-header">
                     <h5 class="modal-title">
                         <i class="bi bi-geo-alt"></i>
@@ -231,13 +261,19 @@
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body">
-                    <img id="modalImagen" class="img-fluid rounded mb-3" src="" alt="">
+                <!-- Cuerpo del modal -->
+                <div class="modal-body text-center d-flex flex-column align-items-center">
+                    <img id="modalImagen" class="img-fluid rounded mb-3" src="" alt="Destino">
                     <p id="modalDescripcion"></p>
                     <p><strong>Precio:</strong> <span id="modalPrecio"></span></p>
                     <p><strong>Duración:</strong> <span id="modalDuracion"></span></p>
+                    <p><strong>Valoración:</strong> <span id="modalRating"></span></p>
                 </div>
-                <div class="modal-footer">
+                <!-- Pie del modal -->
+                <div class="modal-footer justify-content-center">
+                    <button class="btn btn-success">
+                        <i class="bi bi-cart"></i> Reservar
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Cerrar
                     </button>
@@ -248,17 +284,35 @@
 </body>
 <footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
-
         <p class="mb-1">© 2026 Turismo</p>
         <p class="mb-1">Trabajo Práctico - Programación Web</p>
-
-        <div>
-            <i class="bi bi-instagram mx-2"></i>
-            <i class="bi bi-facebook mx-2"></i>
-            <i class="bi bi-whatsapp mx-2"></i>
+        <!-- Formulario -->
+        <div class="container">
+            <div class="row">
+                <!-- Formulario -->
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Tu correo" required>
+                        <textarea class="form-control mb-2" placeholder="Mensaje"></textarea>
+                        <button class="btn btn-light">Enviar</button>
+                    </form>
+                </div>
+                <!-- Redes sociales -->
+                <div class="col-md-4 text-white text-center py-4 mt-5">
+                    <h5>Síguenos</h5>
+                    <i class="bi bi-instagram mx-2"></i>
+                    <i class="bi bi-facebook mx-2"></i>
+                    <i class="bi bi-whatsapp mx-2"></i>
+                </div>
+                <!-- Mapa embebido -->
+                <div class="col-md-4">
+                    <h5>Ubicación</h5>
+                    <iframe src="https://maps.google.com/maps?q=Jujuy&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                        height="150" style="border:0;"></iframe>
+                </div>
+            </div>
         </div>
-
-    </div>
 </footer>
 
 </html>

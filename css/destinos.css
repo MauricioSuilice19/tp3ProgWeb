@@ -1,4 +1,4 @@
-/* Botones de Filtro */
+/* BOTONES DE FILTRO */
 
 .boton-filtro {
     margin: 5px;
@@ -11,8 +11,41 @@
     transform: scale(1.05);
 }
 
+/* iconos botones */
+.boton-filtro i {
+    margin-right: 6px;
+}
 
-/* Card de Destinos */
+
+/* HERO (imagen principal) */
+
+.hero {
+    height: 100vh;
+    background: url("../img/destinos/Hero.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    font-size: 2rem;
+}
+
+
+/* animacion scroll */
+
+.destino {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.destino.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* CARDS */
 
 .destino-card {
     overflow: hidden;
@@ -26,6 +59,11 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* click efecto */
+.destino-card:active {
+    transform: scale(0.97);
+}
+
 .card-body p {
     margin: 5px 0;
 }
@@ -35,11 +73,11 @@
 }
 
 
-/* IMÁGENES */
+/* IMAGEN CARD */
 
 .img-container {
     position: relative;
-    overflow: hidden; /* evita que la imagen se salga al hacer zoom */
+    overflow: hidden;
 }
 
 .destino-card img {
@@ -50,7 +88,7 @@
 }
 
 
-/* Overlay (INFO HOVER) */
+/* OVERLAY */
 
 .overlay {
     position: absolute;
@@ -72,9 +110,7 @@
     padding: 10px;
 }
 
-
-/* Efecto Hover (imagen + overlay juntos) */
-
+/* hover imagen + overlay */
 .img-container:hover img,
 .img-container:hover .overlay {
     transform: scale(1.1);
@@ -85,11 +121,120 @@
 }
 
 
-/* Tabla */
+/* TABLA */
 
 .table tbody tr:hover {
     background-color: #f2f2f2;
     transition: 0.3s;
+}
+
+
+/* tabla precios */
+
+.tabla-precios {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* encabezado */
+.tabla-precios thead {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* celdas */
+.tabla-precios th,
+.tabla-precios td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* filas */
+.tabla-precios tbody tr {
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* hover tipo app */
+.tabla-precios tbody tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01);
+}
+
+
+/* MODAL */
+
+/* animacion */
+.modal.fade .modal-dialog {
+    transform: scale(0.9) translateY(-30px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* fondo */
+.modal-backdrop.show {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* estructura */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body p {
+    margin-bottom: 8px;
+}
+
+/* botones modal */
+.modal-footer .btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
+/* Imagen Modal */
+
+#modalImagen {
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    object-fit: cover;
+
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    display: block;
+}
+
+/* pequeño zoom */
+.modal.show #modalImagen {
+    transform: scale(1.02);
+}
+
+
+/* Rating */
+
+.rating {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+#modalRating {
+    color: #ffc107;
+    font-size: 1.5rem;
 }
 
 
@@ -102,22 +247,60 @@
 }
 
 
-/* Iconos */
+/* Modo oscuro */
 
-.boton-filtro i {
-    margin-right: 6px;
+/* fondo general */
+body.dark-mode {
+    background: #121212;
+    color: #f1f1f1;
 }
 
-
-/* Css Modal */
-.modal-content {
-    background: #ffffff;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* cards */
+body.dark-mode .destino-card {
+    background: #1e1e1e;
+    color: #fff;
 }
 
-/* Fondo oscuro atrás */
-.modal-backdrop.show {
-    opacity: 0.7;
+/* botones */
+body.dark-mode .boton-filtro {
+    border-color: #ccc;
+    color: #fff;
+}
+
+/* tabla */
+body.dark-mode .tabla-precios {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* encabezado tabla */
+body.dark-mode .tabla-precios thead {
+    background: #2c2c2c;
+}
+
+/* filas tabla */
+body.dark-mode .tabla-precios tbody tr {
+    background: transparent;
+}
+
+/* hover tabla */
+body.dark-mode .tabla-precios tbody tr:hover {
+    background: #2a2a2a;
+}
+
+/* separadores */
+body.dark-mode .tabla-precios tr {
+    border-bottom: 1px solid #333;
+}
+
+/* bordes */
+body.dark-mode .tabla-precios th,
+body.dark-mode .tabla-precios td {
+    border-color: #333;
+}
+
+/* modal */
+body.dark-mode .modal-content {
+    background: #1e1e1e;
+    color: #fff;
 }
