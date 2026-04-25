@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Turismo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Font Awesome (librería de iconos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-airplane"></i> Turismo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="destinos.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Paquetes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <button id="modoOscuroBtn" class="btn btn-dark">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container" style="margin-top: 100px;">
+        <section class="contact-section reveal mb-5">
+            <div class="row gx-5">
+                <!-- Contacto Info -->
+                <div class="col-md-6 mb-4 contact-info">
+                    <h2 class="mb-3">Diseñemos tu próximo viaje juntos</h2>
+                    <p class="lead mb-4">Nuestro equipo de expertos está listo para resolver tus dudas y ayudarte a armar la ruta perfecta.
+                        Déjanos tus datos o comunícate por nuestros canales directos.</p> 
+                    <div class="contact-info-list d-flex flex-column gap-4">
+                        <div class="contact-item d-flex align-items-start animate-fade-in animate-delay-1">
+                            <div class="contact-icon fs-1 text-primary me-3">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 class="mb-1">Visítanos</h4>
+                                <p class="mb-0 text-muted">Av. Fascio 101<br>San Salvador de Jujuy, Argentina.</p>
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex align-items-start animate-fade-in animate-delay-2">
+                            <div class="contact-icon fs-1 text-primary me-3">
+                                <i class='bx bx-phone-call'></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 class="mb-1">Llámanos</h4>
+                                <p class="mb-0 text-muted">+54 388 4321 5678<br>Atención 24/7 para clientes VIP</p>
+                            </div>
+                        </div>
+        
+                        <div class="contact-item d-flex align-items-start animate-fade-in animate-delay-3">
+                            <div class="contact-icon fs-1 text-primary me-3">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 class="mb-1">Escríbenos</h4>
+                                <p class="mb-0 text-muted">hola@turismo.com<br>soporte@turismo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                <!-- Contacto Form -->
+                <div class="col-md-6 contact-form-card reveal">
+                    <div class="card shadow-sm border-0 p-4 bg-light rounded-4">
+                        <form id="contactForm" action="#modal-success" method="GET">         
+                            <div class="form-floating mb-3">
+                                <input type="text" id="name" class="form-control" placeholder="Nombre Completo" required
+                                    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}">
+                                <label for="name">Nombre Completo</label>
+                            </div>           
+                            <div class="form-floating mb-3">
+                                <input type="email" id="email" class="form-control" placeholder="Correo Electrónico" required>
+                                <label for="email">Correo Electrónico</label>
+                            </div>      
+                            <div class="form-floating mb-3">
+                                <input type="tel" id="phone" class="form-control" placeholder="Número de Teléfono" required pattern="[0-9]{8,15}">
+                                <label for="phone">Número de Teléfono</label>
+                            </div>      
+                            <div class="form-floating mb-4">
+                                <textarea id="message" class="form-control" placeholder="Tu Mensaje o Consulta" required minlength="10" style="height: 120px"></textarea>
+                                <label for="message">Tu Mensaje o Consulta</label>
+                            </div>     
+                        <button type="submit" id="submitBtn" class="btn btn-primary w-100 py-3 fw-bold rounded-3">
+                            <span id="btnText">Enviar Mensaje</span>
+                            <span id="btnSpinner" class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Éxito de Bootstrap -->
+    <div class="modal fade" id="modal-success" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center border-0 shadow-lg rounded-4 p-3">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <i class='bx bx-check-circle text-success' style="font-size: 5rem;"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3" id="modalSuccessLabel">¡Mensaje Enviado!</h3>
+                    <p class="text-muted mb-4">Nos comunicaremos contigo a la brevedad. Tu aventura está a punto de comenzar.</p>
+                    <button type="button" class="btn btn-primary w-100 py-2 fw-bold rounded-3" data-bs-dismiss="modal">De acuerdo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">© 2026 Turismo</p>
+            <p class="mb-1">Trabajo Práctico - Programación Web</p>
+            <!-- Formulario -->
+            <div class="container">
+                <div class="row">
+                    <!-- Formulario -->
+                    <div class="col-md-4">
+                        <h5>Contacto</h5>
+                        <form>
+                            <input type="email" class="form-control mb-2" placeholder="Tu correo" required>
+                            <textarea class="form-control mb-2" placeholder="Mensaje"></textarea>
+                            <button class="btn btn-light">Enviar</button>
+                        </form>
+                    </div>
+                    <!-- Redes sociales -->
+                    <div class="col-md-4 text-white text-center py-4 mt-5">
+                        <h5>Síguenos</h5>
+                        <i class="bi bi-instagram mx-2"></i>
+                        <i class="bi bi-facebook mx-2"></i>
+                        <i class="bi bi-whatsapp mx-2"></i>
+                    </div>
+                    <!-- Mapa embebido -->
+                    <div class="col-md-4">
+                        <h5>Ubicación</h5>
+                        <iframe src="https://maps.google.com/maps?q=Jujuy&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                            height="150" style="border:0;"></iframe>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Lógica de Contacto -->
+    <script src="js/contacto.js"></script>
+</body>
+</html>
