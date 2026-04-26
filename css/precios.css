@@ -1,8 +1,10 @@
+/* Indicadores */
 .carousel-indicators {
-  position: relative;   /* los coloca fuera del carrusel */
-  margin-top: 20px;     /* espacio entre carrusel e indicadores */
-  justify-content: center; /* centrados */
+  position: relative;
+  margin-top: 20px;
+  justify-content: center;
 }
+
 
 .carousel-indicators [data-bs-target] {
   background-color: #555;
@@ -15,7 +17,14 @@
   background-color: #000;
 }
 
+/* Imágenes */
 .card-img-top {
-  height: 180px;       /* altura uniforme */
-  object-fit: cover;   /* recorta manteniendo proporción */
+  height: 180px;
+  object-fit: cover;
+}
+
+/* 🔥 CLAVE: navbar por encima */
+.navbar {
+  position: relative;
+  z-index: 1000;
 }
