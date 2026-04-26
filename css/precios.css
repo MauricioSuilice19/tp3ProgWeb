@@ -1,0 +1,21 @@
+.carousel-indicators {
+  position: relative;   /* los coloca fuera del carrusel */
+  margin-top: 20px;     /* espacio entre carrusel e indicadores */
+  justify-content: center; /* centrados */
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #555;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: #000;
+}
+
+.card-img-top {
+  height: 180px;       /* altura uniforme */
+  object-fit: cover;   /* recorta manteniendo proporción */
+}
