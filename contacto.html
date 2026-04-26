@@ -8,7 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Font Awesome (librería de iconos) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -42,12 +44,12 @@
             <div class="row gx-5">
                 <!-- Contacto Info -->
                 <div class="col-md-6 mb-4 contact-info">
-                    <h2 class="mb-3">Diseñemos tu próximo viaje juntos</h2>
+                    <h2 class="mb-4 contact-title">Diseñemos tu próximo viaje juntos</h2>
                     <p class="lead mb-4">Nuestro equipo de expertos está listo para resolver tus dudas y ayudarte a armar la ruta perfecta.
                         Déjanos tus datos o comunícate por nuestros canales directos.</p> 
                     <div class="contact-info-list d-flex flex-column gap-4">
                         <div class="contact-item d-flex align-items-start animate-fade-in animate-delay-1">
-                            <div class="contact-icon fs-1 text-primary me-3">
+                            <div class="contact-icon me-3">
                                 <i class='bx bx-map'></i>
                             </div>
                             <div class="contact-text">
@@ -56,7 +58,7 @@
                             </div>
                         </div>
                         <div class="contact-item d-flex align-items-start animate-fade-in animate-delay-2">
-                            <div class="contact-icon fs-1 text-primary me-3">
+                            <div class="contact-icon me-3">
                                 <i class='bx bx-phone-call'></i>
                             </div>
                             <div class="contact-text">
@@ -66,7 +68,7 @@
                         </div>
         
                         <div class="contact-item d-flex align-items-start animate-fade-in animate-delay-3">
-                            <div class="contact-icon fs-1 text-primary me-3">
+                            <div class="contact-icon me-3">
                                 <i class='bx bx-envelope'></i>
                             </div>
                             <div class="contact-text">
@@ -78,26 +80,30 @@
                 </div>     
                 <!-- Contacto Form -->
                 <div class="col-md-6 contact-form-card reveal">
-                    <div class="card shadow-sm border-0 p-4 bg-light rounded-4">
-                        <form id="contactForm" action="#modal-success" method="GET">         
+                    <div class="card form-card p-4 rounded-4 h-100">
+                        <form id="contactForm" action="#modal-success" method="GET" class="d-flex flex-column h-100">         
                             <div class="form-floating mb-3">
                                 <input type="text" id="name" class="form-control" placeholder="Nombre Completo" required
                                     pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}">
                                 <label for="name">Nombre Completo</label>
+                                <div class="invalid-feedback" id="nameError">El nombre debe tener entre 3 y 50 letras</div>
                             </div>           
                             <div class="form-floating mb-3">
                                 <input type="email" id="email" class="form-control" placeholder="Correo Electrónico" required>
                                 <label for="email">Correo Electrónico</label>
+                                <div class="invalid-feedback" id="emailError">Debes ingresar un email válido (ej: nombre@dominio.com).</div>
                             </div>      
                             <div class="form-floating mb-3">
                                 <input type="tel" id="phone" class="form-control" placeholder="Número de Teléfono" required pattern="[0-9]{8,15}">
                                 <label for="phone">Número de Teléfono</label>
+                                <div class="invalid-feedback" id="phoneError">Ingresa un número telefónico válido (solo números).</div>
                             </div>      
-                            <div class="form-floating mb-4">
-                                <textarea id="message" class="form-control" placeholder="Tu Mensaje o Consulta" required minlength="10" style="height: 120px"></textarea>
+                            <div class="form-floating mb-4 flex-grow-1">
+                                <textarea id="message" class="form-control h-100" placeholder="Tu Mensaje o Consulta" required minlength="10" style="min-height: 120px"></textarea>
                                 <label for="message">Tu Mensaje o Consulta</label>
+                                <div class="invalid-feedback" id="messageError">El mensaje debe tener al menos 10 caracteres</div>
                             </div>     
-                        <button type="submit" id="submitBtn" class="btn btn-primary w-100 py-3 fw-bold rounded-3">
+                        <button type="submit" id="submitBtn" class="btn btn-primary w-100 py-3 fw-bold rounded-3 mt-auto">
                             <span id="btnText">Enviar Mensaje</span>
                             <span id="btnSpinner" class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
                             </button>
@@ -162,8 +168,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
     <!-- Lógica de Contacto -->
     <script src="js/contacto.js"></script>
 </body>
