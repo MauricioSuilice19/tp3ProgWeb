@@ -1,0 +1,73 @@
+/* Título de contacto */
+.contact-title {
+    font-weight: 800 !important;
+    font-size: 2.9rem !important;
+    line-height: 1.2 !important;
+    color: #292521 !important;
+    transition: color 0.3s ease;
+}
+
+/* MODO OSCURO: Título  */
+html[data-bs-theme='dark'] .contact-title,
+body.dark-mode .contact-title {
+    color: #fafafa !important;
+}
+
+/* Íconos circulares de contacto */
+.contact-icon {
+    width: 65px;
+    height: 65px;
+    min-width: 65px; /* Evita que se deformen con flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.1); /* Fondo azul clarito */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Efecto Hover al pasar el mouse por toda la fila del item */
+.contact-item:hover .contact-icon {
+    background-color: #0d6efd; /* Se rellena de azul */
+    color: #ffffff !important; /* Ícono blanco */
+    transform: scale(1.1); /* Pequeño zoom */
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.3); /* Sombra */
+}
+
+/* Tarjeta del formulario de contacto */
+.form-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* MODO OSCURO: tarjeta */
+html[data-bs-theme='dark'] .form-card,
+body.dark-mode .form-card {
+    background-color: #1e1e24; /* Gris oscuro  */
+    border: 1px solid rgba(255, 255, 255, 0.1) ; /* Borde claro */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) ; /* Sombra */
+}
+
+/* MODO OSCURO: Ajuste de los iconos */
+html[data-bs-theme='dark'] .contact-icon,
+body.dark-mode .contact-icon {
+    color: #6ea8fe; 
+    background-color: rgba(110, 168, 254, 0.1);
+}
+
+/* MODO OSCURO: Efecto Hover ajustado */
+html[data-bs-theme='dark'] .contact-item:hover .contact-icon,
+body.dark-mode .contact-item:hover .contact-icon {
+    background-color: #6ea8fe;
+    color: #1e1e24 ; /* Ícono oscuro para contrastar con el fondo brillante */
+    box-shadow: 0 8px 15px rgba(110, 168, 254, 0.3);
+}
+
+/* Ajustar textos apagados (muted) en modo oscuro para que se lean bien */
+html[data-bs-theme='dark'] .text-muted,
+body.dark-mode .text-muted {
+    color: #adb5bd ;
+}
