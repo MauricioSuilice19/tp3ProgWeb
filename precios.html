@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/precios.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-airplane"></i> Turismo
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="paquetes.html">Agencias</a></li>
+          <li class="nav-item"><a class="nav-link active" href="precios.html">Precios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Bloque de búsqueda -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h1 class="mb-4">Encontrá paquetes imperdibles</h1>
+    <form id="busquedaForm" class="row g-3 justify-content-center">
+      
+      <!-- Campo destino con lista de opciones -->
+      <div class="col-md-3">
+        <select id="destino" class="form-select">
+          <option value="" selected disabled>¿A dónde quieres ir?</option>
+          <option value="Bariloche">Bariloche</option>
+          <option value="Cerro de los 7 Colores">Cerro de los 7 Colores</option>
+          <option value="Jujuy Capital">Jujuy Capital</option>
+          <option value="Purmamarca">Purmamarca</option>
+          <option value="Salinas Grandes">Salinas Grandes</option>
+          <option value="Yala">Yala</option>
+        </select>
+      </div>
+      
+      <!-- Dropdown de meses -->
+      <div class="col-md-3">
+        <div class="dropdown w-100">
+          <button class="btn btn-outline-primary dropdown-toggle w-100" 
+                  type="button" 
+                  id="dropdownMes" 
+                  data-bs-toggle="dropdown" 
+                  data-bs-auto-close="outside" 
+                  aria-expanded="false">
+            Mes de salida
+          </button>
+          <ul class="dropdown-menu w-100 p-2" aria-labelledby="dropdownMes" id="listaMeses">
+            <!-- Se genera dinámicamente en precios.js -->
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Campo pasajeros -->
+      <div class="col-md-3">
+        <input type="number" id="pasajeros" class="form-control" placeholder="Pasajeros" min="1">
+      </div>
+      
+      <!-- Botón buscar -->
+      <div class="col-md-2">
+        <button type="button" id="btnBuscar" class="btn btn-primary w-100">Buscar</button>
+      </div>
+      
+    </form>
+  </div>
+</section>
+
+<!-- Carrusel de destinos -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Volá a los mejores destinos de Argentina</h2>
+  <div id="destinosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+    
+    <!-- Indicadores (puntitos abajo) -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#destinosCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#destinosCarousel" data-bs-slide-to="1"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <!-- Primer grupo -->
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100 d-flex flex-row align-items-center destino-card">
+              <img src="img/destinos/bariloche.jpg" class="img-fluid rounded-start" style="width: 40%;" alt="Bariloche">
+              <div class="card-body">
+                <h5>Bariloche</h5>
+                <p>$120.000 · 5 días</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 d-flex flex-row align-items-center destino-card">
+              <img src="img/destinos/purmamarca.jpg" class="img-fluid rounded-start" style="width: 40%;" alt="Purmamarca">
+              <div class="card-body">
+                <h5>Purmamarca</h5>
+                <p>$45.000 · 3 días</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 d-flex flex-row align-items-center destino-card">
+              <img src="img/destinos/salinas.jpg" class="img-fluid rounded-start" style="width: 40%;" alt="Salinas Grandes">
+              <div class="card-body">
+                <h5>Salinas Grandes</h5>
+                <p>$30.000 · Día completo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segundo grupo -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100 d-flex flex-row align-items-center destino-card">
+              <img src="img/destinos/cerro7colores.jpg" class="img-fluid rounded-start" style="width: 40%;" alt="Cerro de los 7 Colores">
+              <div class="card-body">
+                <h5>Cerro de los 7 Colores</h5>
+                <p>$20.000 · Día completo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 d-flex flex-row align-items-center destino-card">
+              <img src="img/destinos/jujuycapital.jpg" class="img-fluid rounded-start" style="width: 40%;" alt="San Salvador de Jujuy">
+              <div class="card-body">
+                <h5>San Salvador de Jujuy</h5>
+                <p>$18.000 · Día completo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 d-flex flex-row align-items-center destino-card">
+              <img src="img/destinos/yala.jpg" class="img-fluid rounded-start" style="width: 40%;" alt="Lagunas de Yala">
+              <div class="card-body">
+                <h5>Lagunas de Yala</h5>
+                <p>$15.000 · Día completo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#destinosCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#destinosCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Ofertas en paquetes -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-2">Ofertas en paquetes ✈️</h2>
+    <p class="text-center mb-4">Aprovechá los paquetes que bajaron de precio</p>
+
+    <div class="row g-4">
+      <!-- Bariloche -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/bariloche.jpg" class="card-img-top" alt="Bariloche">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Bariloche</h5>
+            <p class="card-text">5 días<br>Incluye: Hotel + Excursiones</p>
+            <p class="card-text fw-bold">Precio por persona: $120.000</p>
+            <a href="#" class="btn btn-primary w-100 ver-paquete" data-paquete="bariloche">Ver paquete</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Salinas Grandes -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/salinas.jpg" class="card-img-top" alt="Salinas Grandes">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Salinas Grandes</h5>
+            <p class="card-text">1 día<br>Incluye: Transporte + Guía</p>
+            <p class="card-text fw-bold">Precio por persona: $30.000</p>
+            <a href="#" class="btn btn-primary w-100 ver-paquete" data-paquete="salinas">Ver paquete</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Purmamarca -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/purmamarca.jpg" class="card-img-top" alt="Purmamarca">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Purmamarca</h5>
+            <p class="card-text">2 días<br>Incluye: Hotel + Traslados</p>
+            <p class="card-text fw-bold">Precio por persona: $45.000</p>
+            <a href="#" class="btn btn-primary w-100 ver-paquete" data-paquete="purmamarca">Ver paquete</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yala -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/yala.jpg" class="card-img-top" alt="Yala">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Yala</h5>
+            <p class="card-text">2 días<br>Incluye: Hotel + Excursiones</p>
+            <p class="card-text fw-bold">Precio por persona: $40.000</p>
+            <a href="#" class="btn btn-primary w-100 ver-paquete" data-paquete="yala">Ver paquete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Recomendaciones y tips -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-2">Recomendaciones y tips para viajar barato</h2>
+    <p class="text-center mb-4">Ver todos</p>
+
+    <div class="row g-4">
+      <!-- Bariloche -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/bariloche.jpg" class="card-img-top" alt="Bariloche">
+          <div class="card-body">
+            <h6 class="text-muted">Hace 1 día</h6>
+            <h5 class="fw-bold">¿Cuál es la mejor época para viajar a Bariloche?</h5>
+            <p class="card-text">En invierno la nieve atrae esquiadores; en verano los lagos son protagonistas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Salinas Grandes -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/salinas.jpg" class="card-img-top" alt="Salinas Grandes">
+          <div class="card-body">
+            <h6 class="text-muted">Hace 1 día</h6>
+            <h5 class="fw-bold">Tips para visitar Salinas Grandes</h5>
+            <p class="card-text">Llevá protector solar y agua. El mejor momento es en temporada seca para apreciar los colores.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jujuy Capital -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/jujuycapital.jpg" class="card-img-top" alt="Jujuy Capital">
+          <div class="card-body">
+            <h6 class="text-muted">Hace 1 día</h6>
+            <h5 class="fw-bold">¿Turismo es confiable?</h5>
+            <p class="card-text">Opera como agencia online con respaldo legal. Comparar en Turismo puede ser mejor opción.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cerro de los 7 Colores -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="img/destinos/cerro7colores.jpg" class="card-img-top" alt="Cerro de los 7 Colores">
+          <div class="card-body">
+            <h6 class="text-muted">Hace 1 día</h6>
+            <h5 class="fw-bold">8 destinos para vacaciones de invierno</h5>
+            <p class="card-text">Bariloche, Ushuaia, Salta y más: nieve, termas y paisajes imperdibles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-1">© 2026 Turismo</p>
+        <p class="mb-1">Trabajo Práctico - Programación Web</p>
+        <!-- Formulario -->
+        <div class="container">
+            <div class="row">
+                <!-- Formulario -->
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <form>
+                        <input type="email" class="form-control mb-2" placeholder="Tu correo" required>
+                        <textarea class="form-control mb-2" placeholder="Mensaje"></textarea>
+                        <button class="btn btn-light">Enviar</button>
+                    </form>
+                </div>
+                <!-- Redes sociales -->
+                <div class="col-md-4 text-white text-center py-4 mt-5">
+                    <h5>Síguenos</h5>
+                    <i class="bi bi-instagram mx-2"></i>
+                    <i class="bi bi-facebook mx-2"></i>
+                    <i class="bi bi-whatsapp mx-2"></i>
+                </div>
+                <!-- Mapa embebido -->
+                <div class="col-md-4">
+                    <h5>Ubicación</h5>
+                    <iframe src="https://maps.google.com/maps?q=Jujuy&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+                        height="150" style="border:0;"></iframe>
+                </div>
+            </div>
+        </div>
+</footer>
+
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script externo -->
+  <script src="js/precios.js"></script>
+</body>
+</html>
