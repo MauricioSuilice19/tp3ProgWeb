@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Font Awesome (librería de iconos) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Estilos del home -->
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-airplane"></i> Turismo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <button id="modoOscuroBtn" class="btn btn-dark">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="container my-5">
+        <h2 class="mb-4">Blog</h2>
+        <!-- Filtros de categorías -->
+        <div class="btn-group mb-4" role="group">
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="all">Todos</button>
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="turismo">Turismo</button>
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="cultura">Cultura</button>
+            <button type="button" class="btn btn-outline-primary filter-btn" data-filter="historia">Historia</button>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 blog-item turismo">
+                <div class="card destino-card">
+                <img src="img/index/salinas.jpg" class="card-img-top" alt="Playa">
+                    <div class="card-body">
+                        <h5 class="card-title">Salinas Grandes</h5>
+                        <p class="card-text">Relájate en arenas blancas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4  blog-item cultura">
+                <div class="card destino-card">
+                <img src="img/index/cerro7colores.jpg" class="card-img-top" alt="cerro de 7 colores">
+                    <div class="card-body">
+                        <h5 class="card-title">Cerro de los Siete Colores</h5>
+                        <p class="card-text">tonalidades rojizas, amarillentas, verdes y violetas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 blog-item historia">
+                <div class="card destino-card">
+                    <img src="img/index/pulcara.jpg" class="card-img-top" alt="pulcara de tilcara">
+                    <div class="card-body">
+                        <h5 class="card-title">Pulcará de Tilcara</h5>
+                        <p class="card-text">sitio arqueológico formado por los tilcaras.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 blog-item cultura">
+                <div class="card destino-card">
+                    <img src="img/index/pumamarca.jpg" class="card-img-top" alt="pumamarca">
+                    <div class="card-body">
+                        <h5 class="card-title">Pumamarca</h5>
+                        <p class="card-text">pueblo de la Quebrada de Humahuaca.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 blog-item turismo">
+                <div class="card destino-card">
+                    <img src="img/index/lagunaYala.jpg" class="card-img-top" alt="laguna de yala">
+                    <div class="card-body">
+                        <h5 class="card-title">Lagunas de Yala</h5>
+                        <p class="card-text">paisajes de yungas, lagunas y naturaleza virgen.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 blog-item turismo">
+                <div class="card destino-card">
+                    <img src="img/index/capitalJujuy.jpg" class="card-img-top" alt="San salvador de jujuy">
+                    <div class="card-body">
+                        <h5 class="card-title">San Salvador de Jujuy</h5>
+                        <p class="card-text">capital de la provincia de Jujuy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Comentarios simulados -->
+        <div class="card mt-3">
+            <div class="card-header">
+                Comentarios
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <strong>Ana:</strong> ¡Me encantó este destino! Muy recomendable.
+                </div>
+                <div class="mb-3">
+                    <strong>Carlos:</strong> Las fotos son increíbles, espero visitarlo pronto.
+                </div>
+                <div class="mb-3">
+                    <strong>Lucía:</strong> Gracias por la información, muy útil para planear mi viaje.
+                </div>
+                <!-- Formulario para comentario simulado -->
+                <form id="commentForm">
+                    <input type="text" class="form-control mb-2" id="name" placeholder="Tu nombre" required>
+                    <textarea class="form-control mb-2" id="comment" placeholder="Escribe tu comentario" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar comentario</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <!-- Footer con formulario, redes sociales y mapa -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+        <div class="row">
+            <p class="mb-1">© 2026 Turismo</p>
+            <p class="mb-1">Trabajo Práctico - Programación Web</p>
+            <!-- Formulario -->
+            <div class="col-md-4">
+            <h5>Contacto</h5>
+            <form>
+                <input type="email" class="form-control mb-2" placeholder="Tu correo" required>
+                <textarea class="form-control mb-2" placeholder="Mensaje"></textarea>
+                <div class="text-start">
+                <button class="btn btn-light">Enviar</button>
+                </div>
+            </form>
+            </div>
+            <!-- Redes sociales -->
+            <div class="col-md-4 text-white text-center py-4 mt-5">
+            <h5>Síguenos</h5>
+            <i class="bi bi-instagram mx-2"></i>
+            <i class="bi bi-facebook mx-2"></i>
+            <i class="bi bi-whatsapp mx-2"></i>
+            </div>
+            <!-- Mapa -->
+            <div class="col-md-4">
+            <h5>Ubicación</h5>
+            <iframe src="https://maps.google.com/maps?q=Jujuy&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="150" style="border:0;"></iframe>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/blog.js"></script>
+</body>
