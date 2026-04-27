@@ -49,9 +49,8 @@ $(document).ready(function () {
 
     // datos
     let destino = $(this).data("destino");
-    let precio = $(this).data("precio");
-    let duracion = $(this).data("duracion");
     let descripcion = $(this).data("descripcion");
+    let actividades = $(this).data("actividades"); // 👈 agregado
 
     // imagen
     let imagen = $(this).closest(".card").find("img").attr("src");
@@ -71,10 +70,9 @@ $(document).ready(function () {
 
     // cargo datos en el modal
     $("#modalTitulo").text(destino);
-    $("#modalPrecio").text(precio);
-    $("#modalDuracion").text(duracion);
     $("#modalImagen").attr("src", imagen);
     $("#modalDescripcion").text(descripcion);
+    $("#modalActividades").text(actividades); // 👈 agregado
     $("#modalRating").html(estrellas);
 
     // abro modal
