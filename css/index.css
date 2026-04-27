@@ -67,20 +67,6 @@ header.hero .hero-text {
   font-weight: bold;
 }
 
-footer h5 {
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-footer a {
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffc107;
-}
-
 footer .btn {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -88,4 +74,24 @@ footer .btn {
 footer .btn:hover {
   background-color: #ffc107;
   transform: scale(1.05);
+}
+/* ====== Modo oscuro ====== */
+.dark-mode section.bg-light {
+  background-color: #1e1e1e !important; /* fondo oscuro */
+  color: #f8f9fa; /* texto claro */
+}
+
+body.dark-mode {
+    background: #1e1e24;
+    color: #f1f1f1;
+}
+
+/* filas tabla */
+body.dark-mode .tabla-precios tbody tr {
+    background: transparent;
+}
+
+/* hover tabla */
+body.dark-mode .tabla-precios tbody tr:hover {
+    background: #1e1e24;
 }

@@ -1,0 +1,49 @@
+/* Estilo general para los comentarios */
+.card-body .mb-3 {
+  background-color: #f8f9fa;   /* gris claro */
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+/* carta de destino */
+.destino-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.destino-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.destino-card img {
+  height: 200px;
+  width: 100%;
+}
+
+.destino-card:hover img {
+  transform: scale(1.1);
+}
+/* Efecto al pasar el mouse */
+.card-body .mb-3:hover {
+  background-color: #e9ecef;   /* un poco más oscuro */
+}
+
+/* Nombre del usuario destacado */
+.card-body strong {
+  color: #0d6efd; /* azul Bootstrap */
+}
+
+footer .btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+/* MODO OSCURO: Efecto Hover ajustado */
+html[data-bs-theme='dark'] .contact-item:hover .contact-icon,
+body.dark-mode .contact-item:hover .contact-icon {
+    background-color: #6ea8fe;
+    color: #1e1e24 ; /* Ícono oscuro para contrastar con el fondo brillante */
+    box-shadow: 0 8px 15px rgba(110, 168, 254, 0.3);
+}

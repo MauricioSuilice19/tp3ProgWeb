@@ -32,8 +32,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="destinos.html">Destinos</a></li>
-            <li class="nav-item"><a class="nav-link" href="paquetes.html">Agencias</a></li>
+            <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
             <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <button id="modoOscuroBtn" class="btn btn-dark">
+              <i class="bi bi-moon"></i>
+            </button>
           </ul>
         </div>
      </div>
@@ -52,7 +57,7 @@
   <section class="container my-5">
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-4 mb-4">
         <div class="card destino-card">
           <img src="img/index/salinas.jpg" class="card-img-top" alt="Playa">
           <div class="card-body">
@@ -61,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 mb-4">
         <div class="card destino-card">
           <img src="img/index/cerro7colores.jpg" class="card-img-top" alt="cerro de 7 colores">
           <div class="card-body">
@@ -70,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 mb-4">
         <div class="card destino-card">
           <img src="img/index/pulcara.jpg" class="card-img-top" alt="pulcara de tilcara">
           <div class="card-body">
@@ -79,8 +84,34 @@
           </div>
         </div>
       </div>
-    </div>
-
+      <div class="col-md-4 mb-4">
+        <div class="card destino-card">
+          <img src="img/index/pumamarca.jpg" class="card-img-top" alt="pumamarca">
+          <div class="card-body">
+            <h5 class="card-title">Pumamarca</h5>
+            <p class="card-text">pueblo de la Quebrada de Humahuaca.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card destino-card">
+          <img src="img/index/lagunaYala.jpg" class="card-img-top" alt="laguna de yala">
+          <div class="card-body">
+            <h5 class="card-title">Lagunas de Yala</h5>
+            <p class="card-text">paisajes de yungas, lagunas y naturaleza virgen.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card destino-card">
+          <img src="img/index/capitalJujuy.jpg" class="card-img-top" alt="San salvador de jujuy">
+          <div class="card-body">
+            <h5 class="card-title">San Salvador de Jujuy</h5>
+            <p class="card-text">capital de la provincia de Jujuy.</p>
+          </div>
+        </div>
+      </div>
+    
     </div>
   </section>
 
@@ -121,7 +152,9 @@
           <form>
             <input type="email" class="form-control mb-2" placeholder="Tu correo" required>
             <textarea class="form-control mb-2" placeholder="Mensaje"></textarea>
-            <button class="btn btn-light">Enviar</button>
+            <div class="text-start">
+              <button class="btn btn-light">Enviar</button>
+            </div>
           </form>
         </div>
         <!-- Redes sociales -->
@@ -143,7 +176,7 @@
   <!-- Bootstrap JS + jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="js/index.js"></script>
   <!-- Script jQuery para animaciones -->
   <script>
     // Texto animado en Hero
