@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header class="hero-contacto">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-airplane"></i> Turismo
@@ -24,22 +25,36 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="destinos.html">Destinos</a>
+                        <a class="nav-link" href="destinos.html">Destinos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Paquetes</a>
+                        <a class="nav-link" href="Agencia.html">Agencias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="precios.html">Precios</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                    
                     <button id="modoOscuroBtn" class="btn btn-dark">
                         <i class="bi bi-moon"></i>
                     </button>
                 </ul>
             </div>
         </div>
-    </nav>
-    <main class="container" style="margin-top: 100px;">
+        </nav>
+        <!-- Contenido sobre la imagen de fondo -->
+        <div class="hero-content container ">
+            <h1 class="display-3 fw-bold text-white text-shadow">Contacto</h1>
+            <p class="lead text-white text-shadow">Estamos aquí para ayudarte a planear tu próxima aventura.</p>
+        </div>
+        <!-- Separador en forma de ola -->
+        <div class="wave">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path></svg>
+        </div>
+    </header>
+    <main class="container mt-4 mb-5">
         <section class="contact-section reveal mb-5">
             <div class="row gx-5">
                 <!-- Contacto Info -->
@@ -103,7 +118,7 @@
                                 <label for="message">Tu Mensaje o Consulta</label>
                                 <div class="invalid-feedback" id="messageError">El mensaje debe tener al menos 10 caracteres</div>
                             </div>     
-                        <button type="submit" id="submitBtn" class="btn btn-primary w-100 py-3 fw-bold rounded-3 mt-auto">
+                        <button type="submit" id="submitBtn" class="btn btn-primary w-100 py-3 fw-bold rounded-3 mt-2">
                             <span id="btnText">Enviar Mensaje</span>
                             <span id="btnSpinner" class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
                             </button>
