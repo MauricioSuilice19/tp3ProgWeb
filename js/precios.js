@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   const mesActual = new Date().getMonth();
 
-  // Generar lista con checkboxes
+  // Generar lista
   let listaHtml = `
     <li>
       <div class="form-check mes-item">
@@ -37,22 +37,21 @@ $(document).ready(function () {
 
   $("#listaMeses").html(listaHtml);
 
-  // Click en toda la fila (fix doble toggle)
-  $(document).on("click", ".mes-item", function (e) {
+  // ✅ CLICK SOLO DENTRO DEL DROPDOWN (no global)
+  $("#listaMeses").on("click", ".mes-item", function (e) {
     if ($(e.target).is("input") || $(e.target).is("label")) return;
 
-    e.stopPropagation();
     let checkbox = $(this).find(".mes-check");
     checkbox.prop("checked", !checkbox.prop("checked")).trigger("change");
   });
 
-  // Evitar cierre al hacer click en checkbox
-  $(document).on("click", ".mes-check", function (e) {
+  // ✅ SOLO evita cierre del dropdown, no afecta todo el documento
+  $("#listaMeses").on("click", ".mes-check", function (e) {
     e.stopPropagation();
   });
 
-  // ✅ NUEVO: lógica exclusiva
-  $(document).on("change", ".mes-check", function () {
+  // Lógica exclusiva
+  $("#listaMeses").on("change", ".mes-check", function () {
     let valor = $(this).val();
 
     if (valor === "En cualquier momento" && $(this).is(":checked")) {
@@ -62,10 +61,9 @@ $(document).ready(function () {
     }
   });
 
-  // Botón aplicar
-  $(document).on("click", "#btnAplicar", function (e) {
+  // Aplicar
+  $("#listaMeses").on("click", "#btnAplicar", function (e) {
     e.preventDefault();
-    e.stopPropagation();
 
     mesesSeleccionados = [];
     $(".mes-check:checked").each(function () {
@@ -84,10 +82,10 @@ $(document).ready(function () {
 
     bootstrap.Dropdown
       .getInstance(document.getElementById('dropdownMes'))
-      .hide();
+      ?.hide();
   });
 
-  // Botón buscar
+  // Buscar
   $("#btnBuscar").click(function () {
     let destino = $("#destino").val();
     let pasajeros = $("#pasajeros").val();
@@ -101,7 +99,7 @@ $(document).ready(function () {
     }
   });
 
-  // Hover carrusel
+  // Hover imágenes
   $(".carousel-item img").hover(
     function () {
       $(this).css({"transform":"scale(1.05)","transition":"transform 0.3s"});
@@ -111,40 +109,39 @@ $(document).ready(function () {
     }
   );
 
-  // Datos de paquetes
-const paquetes = {
-  bariloche: {
-    titulo: "Bariloche – 5 días",
-    resumen: "Duración: 5 días<br>Destino: Bariloche<br>Incluye: Hotel + Excursiones",
-    vuelo: "No aplica (paquete terrestre)",
-    hotel: "Hotel en Bariloche – Excursiones incluidas",
-    incluye: "<ul><li>Hotel</li><li>Excursiones</li></ul>"
-  },
-  salinas: {
-    titulo: "Salinas Grandes – 1 día",
-    resumen: "Duración: 1 día<br>Destino: Salinas Grandes<br>Incluye: Transporte + Guía",
-    vuelo: "Transporte terrestre",
-    hotel: "No aplica (excursión de un día)",
-    incluye: "<ul><li>Transporte</li><li>Guía</li></ul>"
-  },
-  purmamarca: {
-    titulo: "Purmamarca – 2 días",
-    resumen: "Duración: 2 días<br>Destino: Purmamarca<br>Incluye: Hotel + Traslados",
-    vuelo: "Transporte terrestre",
-    hotel: "Hotel en Purmamarca – Traslados incluidos",
-    incluye: "<ul><li>Hotel</li><li>Traslados</li></ul>"
-  },
-  yala: {
-    titulo: "Yala – 2 días",
-    resumen: "Duración: 2 días<br>Destino: Yala<br>Incluye: Hotel + Excursiones",
-    vuelo: "Transporte terrestre",
-    hotel: "Hotel en Yala – Excursiones incluidas",
-    incluye: "<ul><li>Hotel</li><li>Excursiones</li></ul>"
-  }
-};
+  // Datos paquetes (igual)
+  const paquetes = {
+    bariloche: {
+      titulo: "Bariloche – 5 días",
+      resumen: "Duración: 5 días<br>Destino: Bariloche<br>Incluye: Hotel + Excursiones",
+      vuelo: "No aplica (paquete terrestre)",
+      hotel: "Hotel en Bariloche – Excursiones incluidas",
+      incluye: "<ul><li>Hotel</li><li>Excursiones</li></ul>"
+    },
+    salinas: {
+      titulo: "Salinas Grandes – 1 día",
+      resumen: "Duración: 1 día<br>Destino: Salinas Grandes<br>Incluye: Transporte + Guía",
+      vuelo: "Transporte terrestre",
+      hotel: "No aplica (excursión de un día)",
+      incluye: "<ul><li>Transporte</li><li>Guía</li></ul>"
+    },
+    purmamarca: {
+      titulo: "Purmamarca – 2 días",
+      resumen: "Duración: 2 días<br>Destino: Purmamarca<br>Incluye: Hotel + Traslados",
+      vuelo: "Transporte terrestre",
+      hotel: "Hotel en Purmamarca – Traslados incluidos",
+      incluye: "<ul><li>Hotel</li><li>Traslados</li></ul>"
+    },
+    yala: {
+      titulo: "Yala – 2 días",
+      resumen: "Duración: 2 días<br>Destino: Yala<br>Incluye: Hotel + Excursiones",
+      vuelo: "Transporte terrestre",
+      hotel: "Hotel en Yala – Excursiones incluidas",
+      incluye: "<ul><li>Hotel</li><li>Excursiones</li></ul>"
+    }
+  };
 
-
-  // Crear modal genérico si no existe
+  // Modal (igual)
   if ($("#modalPaquete").length === 0) {
     $("body").append(`
       <div class="modal fade" id="modalPaquete" tabindex="-1">
@@ -161,9 +158,9 @@ const paquetes = {
     `);
   }
 
-  // Evento click en botones
   $(document).on("click", ".ver-paquete", function (e) {
     e.preventDefault();
+
     let key = $(this).data("paquete");
     let paquete = paquetes[key];
 
@@ -174,28 +171,9 @@ const paquetes = {
         <h6>Vuelo</h6><p>${paquete.vuelo}</p>
         <h6>Hotel</h6><p>${paquete.hotel}</p>
         <h6>El precio incluye</h6>${paquete.incluye}
-        <hr>
-        <h6>Formulario de contacto</h6>
-        <form>
-          <div class="mb-3">
-            <label class="form-label">Nombre completo</label>
-            <input type="text" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Teléfono / WhatsApp</label>
-            <input type="tel" class="form-control" required>
-          </div>
-          <button type="submit" class="btn btn-success">Enviar consulta</button>
-        </form>
       `);
 
-      // Mostrar modal
-      let modal = new bootstrap.Modal(document.getElementById('modalPaquete'));
-      modal.show();
+      new bootstrap.Modal(document.getElementById('modalPaquete')).show();
     }
   });
 

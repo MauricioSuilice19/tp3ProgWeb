@@ -15,6 +15,23 @@
 .boton-filtro i {
     margin-right: 6px;
 }
+/* titulo seccion */
+.titulo-seccion{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+.titulo-seccion::after{
+    content:"";
+    width: 60px;
+    height: 4px;
+    background: #0d6efd;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
 /* Navbar */
 .navbar-custom{
     position: absolute;
@@ -167,7 +184,16 @@
 .img-container:hover .overlay {
     opacity: 1;
 }
-
+/* experiencia */
+.experiencia{
+    padding: 40px 0;
+}
+.experiencia i{
+    transition: transform 0.3s;
+}
+.experiencia i:hover{
+    transform: scale(1.2);
+}
 
 /* TABLA */
 

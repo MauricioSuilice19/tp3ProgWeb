@@ -22,26 +22,21 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
-
                     <li class="nav-item">
                         <a class="nav-link active" href="destinos.html">Destinos</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="paquetes.html">Paquetes</a>
+                        <a class="nav-link" href="paquetes.html">Agencias</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
-                    
+                    <li class="nav-item"><a class="nav-link active" href="precios.html">Precios</a></li>
                     <button id="modoOscuroBtn" class="btn btn-dark">
                         <i class="bi bi-moon"></i>
                     </button>
-
                 </ul>
             </div>
 
@@ -52,12 +47,13 @@
             <source src="video/destino.mp4" type="video/mp4">
         </video>
         <div class="hero-content container">
-        <h1>Descubri lo nuevo</h1>
-        <h3>Viaja, disfruta y vivi la experiencia con nosotros!</h3>
+            <h1>Descubri lo nuevo</h1>
+            <h3>Viaja, disfruta y vivi la experiencia con nosotros!</h3>
         </div>
     </div>
     <div class="contenedor5">
-        <h2 class="text-center">Destinos</h2>
+        <h2 class="titulo-seccion">Explora nuestros destinos</h2>
+        <p class="text-center text-muted mb-4"> Elegi tu proxima aventura</p>
         <div class="text-center mb-4">
             <button class="boton-filtro btn btn-outline-primary active" data-filter="todos">
                 <i class="bi bi-grid"></i> Todos</button>
@@ -82,11 +78,11 @@
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Lagunas de Yala</h5>
                         <div class="rating"></div>
-                        <p><i class="bi bi-cash"></i> $15.000 </p>
-                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <p><i class="bi bi-stars"></i> Naturaleza y tranquilidad</p>
+                        <p><i class="bi bi-activity"></i>Senderismo - Fotografia - Relax</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Lagunas de Yala"
-                            data-precio="$15.000" data-duracion="Dia Completo"
-                            data-descripcion="Lagunas y senderismo en Yala">
+                            data-descripcion="Un entorno natural ideal para desconectar y disfrutar de la belleza de las lagunas y el senderismo en Yala"
+                            data-actividades="Senderismo, Fotografia, Observacion de flora y fauna">
                             <i class="bi bi-eye"></i> Ver más
                         </button>
                     </div>
@@ -103,11 +99,11 @@
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Salvador De Jujuy</h5>
                         <div class="rating"></div>
-                        <p><i class="bi bi-cash"></i> $18.000 </p>
-                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <p><i class="bi bi-stars"></i>Cultura y vida urbana</p>
+                        <p><i class="bi bi-activity"></i>Museos - Gastronomia - Historia</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Salvador De Jujuy"
-                            data-precio="$18.000" data-duracion="Dia Completo"
-                            data-descripcion="Tour por la Ciudad + Cultura">
+                            data-descripcion="Recorre la capital jujeña, combinand historia, cultura y una variedad oferta gastronomica"
+                            data-actividades="Visita a museos, Degustacion de comida local, Recorrido historico por la ciudad">
                             <i class="bi bi-eye"></i> Ver más
                         </button>
                     </div>
@@ -124,10 +120,11 @@
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Purmamarca</h5>
                         <div class="rating"></div>
-                        <p><i class="bi bi-cash"></i> $45.000 </p>
-                        <p><i class="bi bi-calendar-event"></i> 3 dias</p>
-                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Purmamarca" data-precio="$45.000"
-                            data-duracion="3 dias" data-descripcion="3 Días - Cultura y paisajes unicos">
+                        <p><i class="bi bi-stars"></i>Cultura y paisajes Unicos</p>
+                        <p><i class="bi bi-activity"></i>Trekking - Fotografia - Turismo</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Purmamarca"
+                            data-descripcion="Descubri los cerros y la cultura del norte argentino en uno de los pueblos mas iconicos."
+                            data-actividades="Trekking, Fotografia, Turismo cultural">
                             <i class="bi bi-eye"></i> Ver más
                         </button>
                     </div>
@@ -144,11 +141,11 @@
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Cerro de los 7 Colores</h5>
                         <div class="rating"></div>
-                        <p><i class="bi bi-cash"></i> $20.000 </p>
-                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <p><i class="bi bi-stars"></i>Paisaje icónico del norte</p>
+                        <p><i class="bi bi-activity"></i> Caminatas - Fotografía - Excursiones</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Cerro de los 7 Colores"
-                            data-precio="$20.000" data-duracion="Dia Completo"
-                            data-descripcion="Excursion guiada al Cerro de los 7 Colores">
+                            data-descripcion="Uno de los paisajes más famosos de Argentina, ideal para recorrer y fotografiar."
+                            data-actividades="Caminatas, fotografía, excursiones guiadas">
                             <i class="bi bi-eye"></i> Ver más
                         </button>
                     </div>
@@ -165,11 +162,11 @@
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Salinas Grandes</h5>
                         <div class="rating"></div>
-                        <p><i class="bi bi-cash"></i> $30.000 </p>
-                        <p><i class="bi bi-calendar-event"></i> Dia Completo</p>
+                        <p><i class="bi bi-stars"></i> Experiencia única en el salar</p>
+                        <p><i class="bi bi-activity"></i> Fotografía - Excursión - Turismo</p>
                         <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Salinas Grandes"
-                            data-precio="$30.000" data-duracion="Dia Completo"
-                            data-descripcion="Experiencia única en las salinas">
+                            data-descripcion="Un paisaje blanco infinito que ofrece una experiencia visual única en Argentina."
+                            data-actividades="Fotografía, excursiones, turismo panorámico">
                             <i class="bi bi-eye"></i> Ver más
                         </button>
                     </div>
@@ -186,108 +183,146 @@
                     <div class="card-body">
                         <h5><i class="bi bi-geo-alt"></i> Bariloche</h5>
                         <div class="rating"></div>
-                        <p><i class="bi bi-cash"></i> $120.000 </p>
-                        <p><i class="bi bi-calendar-event"></i> 5 dias</p>
-                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Bariloche" data-precio="$120.000"
-                            data-duracion="5 dias" data-descripcion="Experiencia única en la nieve">
+                        <p><i class="bi bi-stars"></i> Aventura y nieve</p>
+                        <p><i class="bi bi-activity"></i> Ski - Montaña - Lagos</p>
+                        <button class="btn btn-primary mt-2 ver-mas-btn" data-destino="Bariloche"
+                            data-descripcion="Un destino ideal para disfrutar de la nieve, lagos y actividades de montaña."
+                            data-actividades="Ski, trekking, excursiones lacustres">
                             <i class="bi bi-eye"></i> Ver más
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="table-responsive mt-5">
-            <table class="table tabla-precios text-center align-middle">
-                <thead>
-                    <tr>
-                        <th>Destino</th>
-                        <th>Duracion</th>
-                        <th>Precio</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr data-destino="bariloche">
-                        <td>Bariloche</td>
-                        <td>5 dias</td>
-                        <td>$120.000</td>
-                        <td><span class="badge bg-primary">Disponible</span></td>
-                    </tr>
-                    <tr data-destino="purmamarca">
-                        <td>Purmamarca</td>
-                        <td>3 dias</td>
-                        <td>$45.000</td>
-                        <td><span class="badge bg-success">Popular</span></td>
-                    </tr>
-                    <tr data-destino="salinas">
-                        <td>Salinas Grandes</td>
-                        <td>Dia Completo</td>
-                        <td>$30.000</td>
-                        <td><span class="badge bg-info">Recomendado</span></td>
-                    </tr>
-                    <tr data-destino="cerro7">
-                        <td>Cerro de los 7 Colores</td>
-                        <td>Dia Completo</td>
-                        <td>$20.000</td>
-                        <td><span class="badge bg-secondary">Nuevo</span></td>
-                    </tr>
-                    <tr data-destino="jujuy">
-                        <td>San Salvador De Jujuy</td>
-                        <td>Dia Completo</td>
-                        <td>$18.000</td>
-                        <td><span class="badge bg-primary">Disponible</span></td>
-                    </tr>
-                    <tr data-destino="yala">
-                        <td>Lagunas de Yala</td>
-                        <td>Dia Completo</td>
-                        <td>$15.000</td>
-                        <td><span class="badge bg-success">Economico</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JS -->
-    <script src="js/main.js"></script>
-    <script src="js/destinos.js"></script>
-    <!-- Modal de destino -->
-    <div class="modal fade" id="destinoModal" tabindex="-1">
-        <!-- Modal centrado -->
-        <div class="modal-dialog modal-dialog-centered">
-            <!-- Contenido del modal -->
-            <div class="modal-content">
-                <!-- Encabezado del modal -->
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        <i class="bi bi-geo-alt"></i>
-                        <span id="modalTitulo"></span>
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="mt-5 experiencia">
+            <h3 class="text-center">¿Por qué elegir estos destinos?</h3>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <i class="bi bi-image fs-1 text-primary"></i>
+                    <h5 class="mt-3">Paisajes unicos</h5>
+                    <p>Disfrutá de vistas increíbles y lugares inolvidables.</p>
                 </div>
-                <!-- Cuerpo del modal -->
-                <div class="modal-body text-center d-flex flex-column align-items-center">
-                    <img id="modalImagen" class="img-fluid rounded mb-3" src="" alt="Destino">
-                    <p id="modalDescripcion"></p>
-                    <p><strong>Precio:</strong> <span id="modalPrecio"></span></p>
-                    <p><strong>Duración:</strong> <span id="modalDuracion"></span></p>
-                    <p><strong>Valoración:</strong> <span id="modalRating"></span></p>
+                <div class="col-md-4">
+                    <i class="bi bi-compass fs-1 text-primary"></i>
+                    <h5 class="mt-3">Experiencias Guiadas</h5>
+                    <p>Recorridos con guias especializados para aprovechar al maximo.</p>
                 </div>
-                <!-- Pie del modal -->
-                <div class="modal-footer justify-content-center">
-                    <button class="btn btn-success">
-                        <i class="bi bi-cart"></i> Reservar
-                    </button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Cerrar
-                    </button>
+                <div class="col-md-4">
+                    <i class="bi bi-people fs-1 text-primary"></i>
+                    <h5 class="mt-3">Cultura Local</h5>
+                    <p>Conectate con la historia y tradiciones de cada lugar.</p>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="text-center mt-5">
+                <h4>¿Listo para tu próximo viaje?</h4>
+                <p>Descubrí todas nuestras opciones y empezá tu aventura.</p>
+                <a href="paquetes.html" class="btn btn-primary mt-3">
+                    Ver Paquetes
+                </a>
+            </div>
+            <div class="container mt-5">
+                <h3 class="text-center mb-4">Consultar Precios</h3>
+                <div class="table-responsive">
+                    <table class="table tabla-precios text-center aling-middle">
+                        <thdead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thdead>
+                        <tbody>
+                            <tr data-destino="yala">
+                                <td>Lagunas de Yala</td>
+                                <td>
+                                    <a href="precios.html#yala" class="btn btn-sm btn-primary">
+                                        Ver precios
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr data-destino="jujuy">
+                                <td>Salvador De Jujuy</td>
+                                <td>
+                                    <a href="precios.html#jujuy" class="btn btn-sm btn-primary">
+                                        Ver precios
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr data-destino="purmamarca">
+                                <td>Purmamarca</td>
+                                <td>
+                                    <a href="precios.html#purmamarca" class="btn btn-sm btn-primary">
+                                        Ver precios
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr data-destino="cerro7">
+                                <td>Cerro de los 7 Colores</td>
+                                <td>
+                                    <a href="precios.html#cerro7" class="btn btn-sm btn-primary">
+                                        Ver precios
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr data-destino="salinas">
+                                <td>Salinas Grandes</td>
+                                <td>
+                                    <a href="precios.html#salinas" class="btn btn-sm btn-primary">
+                                        Ver precios
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr data-destino="bariloche">
+                                <td>Bariloche</td>
+                                <td>
+                                    <a href="precios.html#bariloche" class="btn btn-sm btn-primary">
+                                        Ver precios
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- JS -->
+            <script src="js/main.js"></script>
+            <script src="js/destinos.js"></script>
+            <!-- Modal de destino -->
+            <div class="modal fade" id="destinoModal" tabindex="-1">
+                <!-- Modal centrado -->
+                <div class="modal-dialog modal-dialog-centered">
+                    <!-- Contenido del modal -->
+                    <div class="modal-content">
+                        <!-- Encabezado del modal -->
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                <i class="bi bi-geo-alt"></i>
+                                <span id="modalTitulo"></span>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <!-- Cuerpo del modal -->
+                        <div class="modal-body text-center d-flex flex-column align-items-center">
+                            <img id="modalImagen" class="img-fluid rounded mb-3" src="" alt="Destino">
+                            <p id="modalDescripcion"></p>
+                            <p><strong>Actividades:</strong> <span id="modalActividades"></span></p>
+                            <p><strong>Valoración:</strong> <span id="modalRating"></span></p>
+                        </div>
+                        <!-- Pie del modal -->
+                        <div class="modal-footer justify-content-center">
+                            <button class="btn btn-success">
+                                <i class="bi bi-cart"></i> Reservar
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </body>
 <footer class="bg-dark text-white text-center py-4 mt-5">
     <div class="container">
