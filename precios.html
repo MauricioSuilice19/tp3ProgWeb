@@ -27,6 +27,7 @@
           <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
           <li class="nav-item"><a class="nav-link active" href="precios.html">Precios</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         </ul>
       </div>
     </div>
@@ -36,11 +37,13 @@
 <section class="bg-light py-5">
   <div class="container text-center">
     <h1 class="mb-4">Encontrá paquetes imperdibles</h1>
+
+    <!-- 🔥 IMPORTANTE: form -->
     <form id="busquedaForm" class="row g-3 justify-content-center">
       
-      <!-- Campo destino con lista de opciones -->
+      <!-- Destino -->
       <div class="col-md-3">
-        <select id="destino" class="form-select">
+        <select id="destino" class="form-select" required>
           <option value="" selected disabled>¿A dónde quieres ir?</option>
           <option value="Bariloche">Bariloche</option>
           <option value="Cerro de los 7 Colores">Cerro de los 7 Colores</option>
@@ -51,31 +54,39 @@
         </select>
       </div>
       
-      <!-- Dropdown de meses -->
+      <!-- Mes -->
       <div class="col-md-3">
         <div class="dropdown w-100">
           <button class="btn btn-outline-primary dropdown-toggle w-100" 
                   type="button" 
                   id="dropdownMes" 
                   data-bs-toggle="dropdown" 
-                  data-bs-auto-close="outside" 
-                  aria-expanded="false">
+                  data-bs-auto-close="outside">
             Mes de salida
           </button>
-          <ul class="dropdown-menu w-100 p-2" aria-labelledby="dropdownMes" id="listaMeses">
-            <!-- Se genera dinámicamente en precios.js -->
-          </ul>
+
+          <ul class="dropdown-menu w-100 p-2" id="listaMeses"></ul>
+
+          <!-- 🔥 input oculto para validar -->
+          <input type="hidden" id="mesHidden" required>
         </div>
       </div>
       
-      <!-- Campo pasajeros -->
+      <!-- Pasajeros -->
       <div class="col-md-3">
-        <input type="number" id="pasajeros" class="form-control" placeholder="Pasajeros" min="1">
+        <input type="number" id="pasajeros" 
+              class="form-control" 
+              placeholder="Pasajeros" 
+              min="1" 
+              required>
       </div>
       
-      <!-- Botón buscar -->
+      <!-- Botón -->
       <div class="col-md-2">
-        <button type="button" id="btnBuscar" class="btn btn-primary w-100">Buscar</button>
+        <!-- 🔥 type submit -->
+        <button type="submit" class="btn btn-primary w-100">
+          Buscar
+        </button>
       </div>
       
     </form>
@@ -345,5 +356,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Script externo -->
   <script src="js/precios.js"></script>
+  
 </body>
 </html>

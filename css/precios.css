@@ -28,3 +28,55 @@
   position: relative;
   z-index: 1000;
 }
+
+.modo-oscuro {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Texto general */
+.modo-oscuro h1,
+.modo-oscuro h2,
+.modo-oscuro h3,
+.modo-oscuro h4,
+.modo-oscuro h5,
+.modo-oscuro h6,
+.modo-oscuro p,
+.modo-oscuro span,
+.modo-oscuro label {
+  color: #ffffff;
+}
+
+/* Links del navbar */
+.modo-oscuro .nav-link {
+  color: #ffffff !important;
+}
+
+.modo-oscuro .nav-link.active {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+/* Inputs y selects */
+.modo-oscuro input,
+.modo-oscuro select {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+/* Placeholder */
+.modo-oscuro input::placeholder {
+  color: #ccc;
+}
+
+/* Cards (si tenés) */
+.modo-oscuro .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Navbar más oscuro */
+.modo-oscuro .navbar {
+  background-color: #000 !important;
+}
