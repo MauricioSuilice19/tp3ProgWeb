@@ -50,6 +50,15 @@ $(document).ready(function () {
         }
     }
 
+    function sanitize(value) {
+        return value
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#x27;");
+    }
+
     // Validaciones en tiempo real con .on('input') y .on('blur') para cada campo
     $('#name').on('input blur', validateName);
     $('#email').on('input blur', validateEmail);
