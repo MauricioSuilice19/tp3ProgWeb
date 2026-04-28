@@ -118,4 +118,40 @@ $(document).ready(function () {
         
         $('body').toggleClass('dark-mode'); // Mantiene compatibilidad con los estilos CSS manuales
     });
+
+    // --- Simulación de Phishing ---
+
+    // 1. Inicializar Popovers de Bootstrap para las pistas
+    // Esto permite que los popovers se muestren al hacer clic.
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+    // 2. Manejar el clic en las pistas de phishing
+    $('.phishing-clue').on('click', function() {
+        // Marcar la pista como encontrada con un fondo amarillo
+        $(this).addClass('bg-warning rounded px-1 found');
+        
+        // Comprobar si se encontraron todas las pistas
+        const totalClues = $('.phishing-clue').length;
+        const foundClues = $('.phishing-clue.found').length;
+
+        if (totalClues === foundClues) {
+            // Mostrar mensaje de éxito si se encontraron todas
+            setTimeout(() => {
+                $('#phishing-feedback').removeClass('d-none');
+            }, 500); // Pequeño delay para que el último popover sea visible
+        }
+    });
+
+    // 3. Resetear la simulación cuando el modal se cierra
+    $('#phishingModal').on('hidden.bs.modal', function () {
+        // Quitar clases de las pistas encontradas para reiniciar
+        $('.phishing-clue').removeClass('bg-warning rounded px-1 found');
+        
+        // Ocultar el mensaje de feedback
+        $('#phishing-feedback').addClass('d-none');
+
+        // Ocultar todos los popovers que puedan haber quedado abiertos
+        $('.popover').remove();
+    });
 });

@@ -132,6 +132,47 @@
         </section>
     </main>
 
+    <!-- Phishing Simulation Section -->
+    <section class="text-center my-5">
+        <h3 class="mb-3">Aprende a Protegerte</h3>
+        <p class="text-muted">Pon a prueba tus habilidades para detectar un intento de fraude.</p>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#phishingModal">
+            <i class="bi bi-shield-exclamation"></i> Iniciar Simulación de Phishing
+        </button>
+    </section>
+
+    <!-- Phishing Modal -->
+    <div class="modal fade" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="phishingModalLabel"><i class="bi bi-exclamation-triangle-fill"></i> ¡Cuidado! Esto podría ser un intento de Phishing</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Este es un correo electrónico <strong>falso</strong>. Haz clic en las partes sospechosas para descubrir por qué.</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <p><strong>De:</strong> Soporte Técnico &lt;<span class="phishing-clue" data-bs-toggle="popover" title="Señal de Alerta" data-bs-content="El dominio 'turismo-seguridad.com' no es nuestro dominio oficial (turismo.com). Los estafadores suelen usar dominios parecidos.">soporte-tecnico@turismo-seguridad.com</span>&gt;</p>
+                            <p><strong>Asunto:</strong> <span class="phishing-clue" data-bs-toggle="popover" title="Señal de Alerta" data-bs-content="Los asuntos con sentido de 'URGENCIA' son una táctica común para que actúes sin pensar.">URGENTE: Su cuenta ha sido comprometida</span></p>
+                            <hr>
+                            <p>Estimado/a <span class="phishing-clue" data-bs-toggle="popover" title="Señal de Alerta" data-bs-content="Un saludo genérico como 'Usuario/a' en lugar de tu nombre real es una bandera roja. Las empresas legítimas suelen personalizar sus correos.">Usuario/a</span>,</p>
+                            <p>Hemos detectado actividad sospechosa en su cuenta. Para su seguridad, hemos bloqueado temporalmente su acceso. Por favor, verifique su identidad haciendo clic en el siguiente enlace para restaurar su cuenta de inmediato:</p>
+                            <p><a href="#" onclick="return false;" class="phishing-clue" data-bs-toggle="popover" title="Señal de Alerta" data-bs-content="Nunca hagas clic en enlaces sospechosos. Pasa el mouse sobre él (sin hacer clic) para ver la URL real. Esta dirige a 'turismo-verificar.net', un sitio falso.">http://turismo-verificar.net/login</a></p>
+                            <p>Si no verifica su cuenta en las próximas 24 horas, será eliminada permanentemente por motivos de <span class="phishing-clue" data-bs-toggle="popover" title="Señal de Alerta" data-bs-content="Los errores de ortografía o gramática son muy comunes en los correos de phishing.">segurida</span>.</p>
+                            <p>Gracias,<br>El equipo de Soporte de Turismo</p>
+                        </div>
+                    </div>
+                    <div id="phishing-feedback" class="alert alert-success mt-3 d-none">
+                        ¡Excelente! Has encontrado todas las pistas.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modal de Éxito de Bootstrap -->
     <div class="modal fade" id="modal-success" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
